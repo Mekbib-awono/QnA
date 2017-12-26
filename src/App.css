@@ -1,0 +1,73 @@
+.qna-item{
+  border: 1px solid #ccc;
+  min-height: 130px;
+  vertical-align: middle;;
+  line-height: 130px;
+  margin: 10px;
+  background: #5db35d;
+  color: #fff;
+  font-size: 48px;
+  cursor: pointer;
+}
+
+.qna-item.visited{
+  background: #e06262;
+  color: #fff;
+}
+
+.category{
+  border: 1px solid #ccc;
+  min-height: 130px;
+  vertical-align: middle;;
+  line-height: 130px;
+  margin: 5px 0;
+  font-size: 48px;
+}
+
+.modal.active{
+  display: block;
+}
+
+.question-box{
+  max-width: 1200px!important;
+  font-size: 48px;
+}
+
+.modal .background.active{
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
