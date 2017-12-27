@@ -10,17 +10,19 @@ class Board extends React.Component {
         this.state = {
             openQuestion: false,
             currentQuestion: null,
-            currentAnswer: null
+            currentAnswer: null,
+            multiple: false
         };
         this.handleOpenQuestion = this.handleOpenQuestion.bind(this);
     }
 
-    handleOpenQuestion(status, question, answer, title) {
+    handleOpenQuestion(status, question, answer, title, multiple) {
         this.setState({
             openQuestion: status,
             currentQuestion: question,
             currentAnswer: answer,
-            currentTitle: title
+            currentTitle: title,
+            isMultipleQn: multiple
         });
     }
 
@@ -30,7 +32,7 @@ class Board extends React.Component {
         const categories =  window.appData.map((category) => {
             const questions =  category.questions.map((qn) => {
                  return (<QnAItem  value={qn.value} openQuestion={this.handleOpenQuestion}
-                                    question={qn.question} answer={qn.answer} title={qn.title}
+                                    question={qn.question} answer={qn.answer} title={qn.title} multiple={qn.multiple}
                     />);
             });
 
@@ -46,7 +48,7 @@ class Board extends React.Component {
 
                 <Question status={this.state.openQuestion} openQuestion={this.handleOpenQuestion}
                         question={this.state.currentQuestion} answer={this.state.currentAnswer}
-                        title={this.state.currentTitle}/>
+                        title={this.state.currentTitle} multiple={this.state.isMultipleQn}/>
 
                 {categories}
              </div>

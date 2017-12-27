@@ -12,7 +12,7 @@ class QnAItem extends React.Component {
     handleClick() {
         this.setState({visited: !this.state.visited});
         if (!this.state.visited) {
-            this.props.openQuestion(true, this.props.question, this.props.answer, this.props.title)
+            this.props.openQuestion(true, this.props.question, this.props.answer, this.props.title, this.props.multiple)
         }
     }
 
